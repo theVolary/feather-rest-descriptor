@@ -5,7 +5,7 @@ describe('FeatherRestDescriptor', function() {
   describe('Schema Gen', function() {
     it('should generate a sample schema', function(done) {
       frd.generateSchemas({ restFolder: __dirname + "/rest" }, function(err, schemas) {
-
+        console.log(JSON.stringify(schemas[0]));
         if (err) throw err;
         
         schemas.should.have.lengthOf(1);
